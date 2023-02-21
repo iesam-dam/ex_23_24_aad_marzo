@@ -7,11 +7,12 @@ los objetivos.
 
 Los objetivos están agrupados en:
 
-1. SharedPreferences (ficheros xml).
-2. Base de Datos (Room).
-3. Firebase (Realtime).
-4. DataStore (ficheros xml + reactividad).
-5. Gestión de fuentes de datos: LocalDataSource y RemoteDataSource.
+1. ![SharedPreferences](https://iesam-dam.github.io/acceso-a-datos/evaluation/ra-sharedpreference.html).
+2. ![Base de Datos (Room)](https://iesam-dam.github.io/acceso-a-datos/evaluation/ra-room.html).
+3. ![Firebase (Realtime)](https://iesam-dam.github.io/acceso-a-datos/evaluation/ra-firebase.html).
+4. ![DataStore](https://iesam-dam.github.io/acceso-a-datos/evaluation/ra-flow.html).
+5. ![Gestión de fuentes de datos: LocalDataSource y RemoteDataSource](https://iesam-dam.github.io/acceso-a-datos/evaluation/ra-data-sources.html).
+6. ![Calidad del código](https://iesam-dam.github.io/acceso-a-datos/evaluation/ra-commons.html)
 
 Si en la prueba existiera algo que no se haya visto en clase o esté fuera de los objetivos no será
 calificado y lo dará el profesor.
@@ -51,20 +52,45 @@ contraseña**. Las premisas a cumplir son:
 ## Ejercicio 2: Bases de Datos Room
 
 Se pide desarrollar una aplicación que obtenga un listado de animales desde remoto y se guarde en
-una caché
-local (Room) para no acceder siempre a remoto. Las premisas a cumplir son:
+una caché local (Room) para no acceder siempre a remoto. Las premisas a cumplir son:
 
-1. La primera vez que se ejecuta la aplicación, se pedirán los datos a remoto.
-2. La segunda vez y posteriores, los datos a devolver serán de local.
-3. El listado de animales se visualizará por consola.
-4. La caché se hará con Room. **No es una caché TTL, no hace falta añadir tiempo**
-5. Si se pulsa el botón: Eliminar datos de Animales, se eliminarán los datos de local.
-6. Al volver a iniciar la app, se hará lo indicado en el paso 1.
-7. Se pide recuperar un único animal. El animal a recuperar puede ser cualquiera. El código está en
+1. Añadir las dependencias necesarias para trabajar con Room.
+2. La primera vez que se ejecuta la aplicación, se pedirán los datos a remoto.
+3. La segunda vez y posteriores, los datos a devolver serán de local.
+4. El listado de animales se visualizará por consola.
+5. La caché se hará con Room. **No es una caché TTL, no hace falta añadir tiempo**
+6. Si se pulsa el botón: Eliminar datos de Animales, se eliminarán los datos de local.
+7. Al volver a iniciar la app, se hará lo indicado en el paso 1.
+8. Se pide recuperar un único animal. El animal a recuperar puede ser cualquiera. El código está en
    MainActivity.
+
+**IMPORTANTE** 
+Leer la descripción del ejercicio 5 pues están relacionados.
 
 ## Ejercicio 3: Firebase
 
 Se pide desarrollar una aplicación que recupere un listado de ofertas. La base de datos está creada
-y tiene la siguiente estructura:  ![](/assets/img_firebase.png)
+con Realtime
+y tiene la siguiente estructura:  ![](/assets/img_firebase.png). Las premisas a cumplir son:
+
+1. Añadir las dependencias necesarias para trabajar con RealtimeDatabase.
+2. Al ejecutarse la aplicación obtendrá el listado de ofertas desde firebase.
+3. Se deberán mostrar los datos en la terminal.
+4. **No hay que guardar nada en local**. Siempre se obtendrán los datos desde remoto.
+
+## Ejercicio 4: DataStore con Flow
+
+Se pide desarrollar una aplicación que defina un fichero DataStore que permita guardar y recuperar
+un listado de establecimientos. Las premisas a cumplir son:
+
+1. Añadir la librería para trabajar con DataStore en su modalidad "preferences" (la vista en clase).
+2. Se trabajará con la feature: establishments
+3. Crear la clase que permita guardar y recuperar un objeto Establishment.
+4. Cuando se pulse el botón **Leer Establecimiento** se recuperará el objeto establishment y se mostrará
+   por terminal.
+
+## Ejercicio  5: Gestión de los DataSource
+
+Este ejercicio se valorará en la resolución que se haga en el **Ejercicio 2 (Room)**.
+
 
