@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Ex_22_23_AAD_Marzo</string>
+    <string name="label_delete">Eliminar datos de login</string>
 </resources>

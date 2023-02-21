@@ -1,4 +1,4 @@
-package com.example.ex_22_23_aad_marzo
+package com.iesam.ex_22_23_aad_marzo
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

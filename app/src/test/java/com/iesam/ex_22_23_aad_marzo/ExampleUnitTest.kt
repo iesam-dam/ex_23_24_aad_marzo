@@ -1,4 +1,4 @@
-package com.example.ex_22_23_aad_marzo
+package com.iesam.ex_22_23_aad_marzo
 
 import org.junit.Test
 
