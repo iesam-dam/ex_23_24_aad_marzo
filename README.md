@@ -66,5 +66,5 @@ local (Room) para no acceder siempre a remoto. Las premisas a cumplir son:
 ## Ejercicio 3: Firebase
 
 Se pide desarrollar una aplicación que recupere un listado de ofertas. La base de datos está creada
-y tiene la siguiente estructura:  !(/assets/img_firebase.png)
+y tiene la siguiente estructura:  ![](/assets/img_firebase.png)
 
