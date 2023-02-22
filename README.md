@@ -7,14 +7,12 @@ los objetivos.
 
 Los objetivos están agrupados en:
 
-1. ![SharedPreferences](https://iesam-dam.github.io/acceso-a-datos/evaluation/ra-sharedpreference.html)
-   .
-2. ![Base de Datos (Room)](https://iesam-dam.github.io/acceso-a-datos/evaluation/ra-room.html).
-3. ![Firebase (Realtime)](https://iesam-dam.github.io/acceso-a-datos/evaluation/ra-firebase.html).
-4. ![DataStore](https://iesam-dam.github.io/acceso-a-datos/evaluation/ra-flow.html).
-5. ![Gestión de fuentes de datos: LocalDataSource y RemoteDataSource](https://iesam-dam.github.io/acceso-a-datos/evaluation/ra-data-sources.html)
-   .
-6. ![Calidad del código](https://iesam-dam.github.io/acceso-a-datos/evaluation/ra-commons.html)
+1. [SharedPreferences](https://iesam-dam.github.io/acceso-a-datos/evaluation/ra-sharedpreference.html).
+2. [Base de Datos (Room)](https://iesam-dam.github.io/acceso-a-datos/evaluation/ra-room.html).
+3. [Firebase (Realtime)](https://iesam-dam.github.io/acceso-a-datos/evaluation/ra-firebase.html).
+4. [DataStore](https://iesam-dam.github.io/acceso-a-datos/evaluation/ra-flow.html).
+5. [Gestión de fuentes de datos: LocalDataSource y RemoteDataSource](https://iesam-dam.github.io/acceso-a-datos/evaluation/ra-data-sources.html).
+6. [Calidad del código](https://iesam-dam.github.io/acceso-a-datos/evaluation/ra-commons.html)
 
 Si en la prueba existiera algo que no se haya visto en clase o esté fuera de los objetivos no será
 calificado y lo dará el profesor.
