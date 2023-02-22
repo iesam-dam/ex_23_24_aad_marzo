@@ -25,12 +25,12 @@
         app:layout_constraintTop_toBottomOf="@id/action_delete_user" />
 
     <Button
-        android:id="@+id/action_read_establishment"
+        android:id="@+id/action_save_establishment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/label_delete_establishment"
+        android:text="@string/label_save_establishment"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/action_delete_user" />
+        app:layout_constraintTop_toBottomOf="@id/action_delete_animals" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
