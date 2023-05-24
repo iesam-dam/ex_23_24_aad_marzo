@@ -1,5 +1,9 @@
 # Examen Acceso a Datos Curso 22-23 (Marzo)
 
+## Solución
+
+La solución se encuentra en la rama [#solution](https://github.com/IESAM-DAM/ex_22_23_aad_marzo/tree/solution) 
+
 ## Aviso Importante
 
 Tal como se indica en la programación didáctica del módulo, para aprobar se necesita superar todos
