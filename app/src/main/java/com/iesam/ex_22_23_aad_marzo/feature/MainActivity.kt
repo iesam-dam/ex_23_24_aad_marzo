@@ -5,9 +5,12 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.iesam.ex_22_23_aad_marzo.R
 import com.iesam.ex_22_23_aad_marzo.feature.login.data.LoginDataRepository
+import com.iesam.ex_22_23_aad_marzo.feature.login.domain.User
 import kotlin.concurrent.thread
+import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
+    lateinit var loginDataRepository: LoginDataRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,17 +28,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initLogin() {
-        val email = "example@email.es"
-        val password = "example_password"
+        val email = "diego@email.es"
+        val password = "diego_password"
 
         //Llamar al repositorio
         //LoginRepository loginRepository = ...
-        LoginDataRepository loginDataRepository =
-
+        loginDataRepository.save()
+        var login = loginDataRepository.get()
+        println(login)
     }
 
     private fun deleteLogin() {
         //Eliminar datos del login.
+        loginDataRepository.delete()
     }
 
     private fun initAnimals() {

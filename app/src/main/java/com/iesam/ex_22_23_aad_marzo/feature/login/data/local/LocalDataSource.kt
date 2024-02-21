@@ -9,5 +9,17 @@ abstract class LocalDataSource(private val user: User) {
     fun get(){
         sharedPref.all
     }
-    
+
+    fun save(){
+        with (sharedPref.edit()){
+            putString("1", user.email)
+            putString("2", user.password)
+        }
+    }
+
+    fun delete(){
+        with(sharedPref.edit()){
+            clear()
+        }
+    }
 }
