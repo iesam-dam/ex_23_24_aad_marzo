@@ -40,14 +40,16 @@ class MainActivity : AppCompatActivity() {
     private fun initAnimals() {
         thread {
             //Ejecutar código para obtener animales
-            localDataSource.get()
+            var animales = localDataSource.get()
+            println(animales)
         }
     }
 
     private fun initAnimalDetail(animalId: Int) {
         thread {
             //Ejecutar código para obtener un animal en concreto
-            localDataSource.getById(animalId)
+            var animal = localDataSource.getById(animalId)
+            println(animal)
         }
     }
 
