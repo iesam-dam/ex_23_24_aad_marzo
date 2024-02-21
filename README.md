@@ -15,7 +15,7 @@ Los objetivos están agrupados en:
 
 ## Requisitos para la realización de la prueba
 
-- La prueba tiene una duración de 4 horas. Una vez terminada la prueba, se quitarán los privilegios
+- La prueba tiene una duración de 3 horas. Una vez terminada la prueba, se quitarán los privilegios
   al usuario para evitar modificaciones.
 - La prueba se entrega a través de una Pull Request por cada uno de los ejercicios solicitados. Si
   no se entrega una Pull Request se considerará no apta.
