@@ -4,7 +4,7 @@ import com.iesam.ex_22_23_aad_marzo.feature.animals.domain.Animal
 
 class AnimalLocalDataSource(): AnimalDao {
     override fun getAnimals(): List<Animal> {
-        TODO("Not yet implemented")
+        return getAnimals()
     }
 
     override fun getAnimal(id: Int): Animal {
