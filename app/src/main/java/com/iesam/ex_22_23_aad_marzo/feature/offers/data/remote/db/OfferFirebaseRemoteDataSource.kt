@@ -8,11 +8,12 @@ import kotlinx.coroutines.tasks.await
 
 class OfferFirebaseRemoteDataSource {
 
-    private lateinit var database: DatabaseReference
+    private val database = Firebase.database
 
     suspend fun getOffers(): List<Offer>{
-        database = Firebase.database.reference
+        database.getReference("offer").get().await().children.map {
 
+        }
     }
 
 }
