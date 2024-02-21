@@ -7,6 +7,4 @@ interface UserRepository {
     fun deleteUser()
 
     fun saveUser(user: User)
-
-    fun checkLogged(user: User)
 }

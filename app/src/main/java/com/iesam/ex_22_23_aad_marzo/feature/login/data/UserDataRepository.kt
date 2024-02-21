@@ -8,14 +8,6 @@ class UserDataRepository(
     private val local: LoginXmlLocalDataSource
 ) : UserRepository {
 
-    override fun checkLogged(user: User) {
-        val userLog = local
-        if (userLog == null) {
-            local.saveUser(user)
-        } else {
-            println(user.toString())
-        }
-    }
 
     override fun saveUser(user: User) {
         local.saveUser(user)
