@@ -1,9 +1,14 @@
 package com.iesam.ex_22_23_aad_marzo.feature
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.iesam.ex_22_23_aad_marzo.R
+import com.iesam.ex_22_23_aad_marzo.feature.animals.data.AnimalDataRepository
+import com.iesam.ex_22_23_aad_marzo.feature.animals.data.local.db.AnimalDbLocalDataSource
+import com.iesam.ex_22_23_aad_marzo.feature.animals.data.remote.AnimalRemoteDataSource
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
@@ -43,7 +48,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun initAnimalDetail(animalId: Int) {
         thread {
-            //Ejecutar código para obtener un animal en concreto
+            val dataRepository = AnimalDataRepository(AnimalDbLocalDataSource(applicationContext),
+                AnimalRemoteDataSource()
+            )
+
+            val animalById = dataRepository.getAnimalById(animalId)
+            Log.d("dev", "animal: $animalById")
         }
     }
 
