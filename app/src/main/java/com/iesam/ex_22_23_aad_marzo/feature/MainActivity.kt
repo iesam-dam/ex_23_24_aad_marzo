@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         initAnimals()
         initAnimalDetail(1)
         initOffers()
+
     }
 
     private fun initLogin() {
