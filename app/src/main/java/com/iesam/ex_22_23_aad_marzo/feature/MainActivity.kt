@@ -1,9 +1,13 @@
 package com.iesam.ex_22_23_aad_marzo.feature
 
+import android.content.Context
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.iesam.ex_22_23_aad_marzo.R
+import com.iesam.ex_22_23_aad_marzo.feature.login.data.UserDataRepository
+import com.iesam.ex_22_23_aad_marzo.feature.login.data.local.xml.UserXmlLocalDataSource
+import com.iesam.ex_22_23_aad_marzo.feature.login.domain.User
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
@@ -27,12 +31,15 @@ class MainActivity : AppCompatActivity() {
         val email = "example@email.es"
         val password = "example_password"
 
-        //Llamar al repositorio
-        //LoginRepository loginRepository = ...
+        val user1 = User(email, password)
+
+        val dataRepository = UserDataRepository(UserXmlLocalDataSource(applicationContext))
+
+        dataRepository.checkUserLogin(user1)
     }
 
     private fun deleteLogin() {
-        //Eliminar datos del login.
+
     }
 
     private fun initAnimals() {
