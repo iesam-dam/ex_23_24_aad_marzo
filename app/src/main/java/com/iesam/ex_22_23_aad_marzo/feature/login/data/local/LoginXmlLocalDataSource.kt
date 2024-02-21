@@ -16,6 +16,7 @@ class LoginXmlLocalDataSource(
         return gson.fromJson(sharedPref.toString(), User::class.java)
     }
 
+
     fun saveUser(user: User) {
         sharedPref.edit() {
             gson.toJson(user)
