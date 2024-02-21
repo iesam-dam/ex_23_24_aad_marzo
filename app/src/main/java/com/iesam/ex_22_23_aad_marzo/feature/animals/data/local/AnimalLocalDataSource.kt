@@ -21,6 +21,7 @@ class AnimalLocalDataSource(
         }
     }
 
+
     fun getAnimalById(id: Int): Animal {
         return animalDao.loadById(id).toModel()
     }
