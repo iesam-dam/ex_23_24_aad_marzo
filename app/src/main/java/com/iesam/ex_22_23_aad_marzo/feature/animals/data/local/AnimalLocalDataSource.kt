@@ -8,10 +8,12 @@ import com.iesam.ex_22_23_aad_marzo.feature.animals.domain.Animal
 class AnimalLocalDataSource(
     applicationContext: Context
 ) {
+
+    private val converter: Converters = Converters()
     private val animalDao = Room.databaseBuilder(
         applicationContext,
         AnimalDataBase::class.java, "AnimalDataBase"
-    ).build().animalDao()
+    ).addTypeConverter(converter).build().animalDao()
 
     fun getAnimals(): List<Animal> {
         return animalDao.getAllAnimals().map {
