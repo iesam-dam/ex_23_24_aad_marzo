@@ -46,6 +46,7 @@ dependencies {
     implementation("com.google.firebase:firebase-database")
     //Estas son las librerias minimas para que funcione firebase
 
+
     // Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3'
