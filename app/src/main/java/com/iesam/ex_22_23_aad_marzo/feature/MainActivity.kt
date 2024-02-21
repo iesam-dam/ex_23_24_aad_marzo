@@ -1,12 +1,15 @@
 package com.iesam.ex_22_23_aad_marzo.feature
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.iesam.ex_22_23_aad_marzo.R
+import com.iesam.ex_22_23_aad_marzo.feature.offers.data.remote.FirebaseDataSource
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
+    lateinit var firebase: FirebaseDataSource
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,6 +59,8 @@ class MainActivity : AppCompatActivity() {
     private fun initOffers() {
         thread {
             //Hacer la llamada al repositorio desde aquí.
+            var ofertas = firebase.get()
+            println("Las ofertas son: $ofertas")
         }
     }
 }
