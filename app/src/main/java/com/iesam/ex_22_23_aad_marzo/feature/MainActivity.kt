@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.iesam.ex_22_23_aad_marzo.R
+import com.iesam.ex_22_23_aad_marzo.feature.login.data.LoginDataRepository
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
@@ -29,6 +30,8 @@ class MainActivity : AppCompatActivity() {
 
         //Llamar al repositorio
         //LoginRepository loginRepository = ...
+        LoginDataRepository loginDataRepository =
+
     }
 
     private fun deleteLogin() {
