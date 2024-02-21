@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.iesam.ex_22_23_aad_marzo.R
+import com.iesam.ex_22_23_aad_marzo.feature.animals.data.local.LocalDataSource
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var localDataSource: LocalDataSource
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,18 +40,23 @@ class MainActivity : AppCompatActivity() {
     private fun initAnimals() {
         thread {
             //Ejecutar código para obtener animales
+            var animales = localDataSource.get()
+            println(animales)
         }
     }
 
     private fun initAnimalDetail(animalId: Int) {
         thread {
             //Ejecutar código para obtener un animal en concreto
+            var animal = localDataSource.getById(animalId)
+            println(animal)
         }
     }
 
     private fun deleteAnimals() {
         thread {
             //Elimino los animales de local..
+            localDataSource.delete()
         }
     }
 
