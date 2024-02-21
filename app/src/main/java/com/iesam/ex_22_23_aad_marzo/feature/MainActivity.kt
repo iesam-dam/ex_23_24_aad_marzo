@@ -1,9 +1,12 @@
 package com.iesam.ex_22_23_aad_marzo.feature
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.iesam.ex_22_23_aad_marzo.R
+import com.iesam.ex_22_23_aad_marzo.feature.offers.data.OfferDataRepository
+import com.iesam.ex_22_23_aad_marzo.feature.offers.data.remote.db.OfferFirebaseRemoteDataSource
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
@@ -53,9 +56,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun initOffers() {
+    private suspend fun initOffers() {
         thread {
-            //Hacer la llamada al repositorio desde aquí.
+            val dataRepository = OfferDataRepository(OfferFirebaseRemoteDataSource())
+
+            val offers = dataRepository.getOffers()
+
+            Log.d("dev", "Ofertas: $offers")
         }
     }
 }
