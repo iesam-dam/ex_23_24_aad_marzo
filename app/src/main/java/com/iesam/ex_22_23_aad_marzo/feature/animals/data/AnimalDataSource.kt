@@ -6,6 +6,6 @@ import com.iesam.ex_22_23_aad_marzo.feature.animals.data.remote.AnimalRemoteData
 class AnimalDataSource(
     private val animalLocalDataSource: AnimalLocalDataSource,
     private val animalRemoteDataSource: AnimalRemoteDataSource
-) {
+){
 
 }
