@@ -16,4 +16,8 @@ class UserDataRepository(private val localDataSource: UserXmlLocalDataSource) {
             Log.d("dev", "$localUser")
         }
     }
+
+    fun deleteUserLogin(){
+        localDataSource.deleteUser()
+    }
 }

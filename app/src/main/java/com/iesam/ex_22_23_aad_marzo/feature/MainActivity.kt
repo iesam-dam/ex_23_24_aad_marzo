@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun deleteLogin() {
-        //Eliminar datos del login.
+
     }
 
     private fun initAnimals() {
