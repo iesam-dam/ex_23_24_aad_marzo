@@ -8,7 +8,7 @@ import com.iesam.ex_22_23_aad_marzo.feature.animals.data.local.LocalDataSource
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
-    private val localDataSource: LocalDataSource
+    private lateinit var localDataSource: LocalDataSource
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
